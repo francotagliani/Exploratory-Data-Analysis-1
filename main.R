@@ -1,4 +1,4 @@
-initial_folder <- "./data/"
+initial_folder <- "./data2/"
 filename <- paste(initial_folder,"Final_Exam.zip",sep="")
 
 # Checking if archieve already exists.
@@ -9,11 +9,12 @@ if (!file.exists(filename)){
   file.remove(filename)
 }  
 
-
+data <- read.table(paste("./data2/",list.files("./data2"),sep=''),sep = ";",header=TRUE)
+names(data)
 
 
 
 
 #Delete File when the execution ends
-file.remove(paste("./data/",list.files("./data"),sep=''))
+file.remove(paste("./data2/",list.files("./data2"),sep=''))
             
